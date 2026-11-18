@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional portfolio of Dicka Latare Tricaesar Sinabang, Industrial Engineering graduate focused on operations, data accuracy, and process improvement.">
+  <meta name="theme-color" content="#101d2d">
+  <title>Dicka Sinabang | Industrial Engineering & Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#101d2d;--navy2:#172b40;--blue:#27627b;--teal:#46b6a3;--gold:#f2b84b;--ink:#172638;--muted:#667588;--paper:#f5f7f9;--white:#fff;--line:#e1e7ec;--soft:#eaf1f4}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 "DM Sans",Arial,sans-serif}
+    a{color:inherit}.container{width:min(1120px,90%);margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(16,29,45,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.09)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:white}
+    .brand{font:800 14px Manrope,sans-serif;letter-spacing:.13em}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:25px}.navlinks a{text-decoration:none;color:#cbd6df;font-size:13px;font-weight:600;transition:.2s}.navlinks a:hover{color:var(--gold)}
+    .menu-btn{display:none;background:transparent;border:1px solid #526274;color:white;border-radius:9px;padding:7px 11px;font:inherit}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#101d2d 0%,#172d43 64%,#1d4655 100%);color:white;padding:92px 0 86px}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:-140px;top:-190px;box-shadow:0 0 0 48px rgba(255,255,255,.025),0 0 0 100px rgba(255,255,255,.02)}
+    .hero:after{content:"";position:absolute;width:260px;height:260px;background:rgba(70,182,163,.12);filter:blur(70px);right:15%;bottom:-160px}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}
+    .eyebrow,.section-label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+    h1,h2,h3{font-family:Manrope,"DM Sans",sans-serif;line-height:1.2}
+    h1{font-size:clamp(38px,5.8vw,66px);letter-spacing:-.055em;margin:17px 0 18px;max-width:760px}
+    .hero p{color:#cbd7e1;font-size:17px;max-width:680px;margin:0}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border-radius:9px;padding:12px 17px;font-weight:700;font-size:13px;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--gold);color:#172638}.btn-ghost{border:1px solid #65788a;color:white}
+    .hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:24px;backdrop-filter:blur(8px)}
+    .hero-card .mini-label{font-size:11px;color:#a9bac8;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+    .hero-card strong{display:block;font:800 27px Manrope;margin:7px 0 3px}
+    .hero-card p{font-size:13px;margin:0;color:#c3d0da}
+    .hero-stat{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.13)}.hero-stat:last-child{border:0;padding-bottom:0}
+    .hero-stat strong{font-size:19px}
+    section{padding:76px 0}.section-head{max-width:720px;margin-bottom:30px}
+    .section-label{color:var(--blue)}h2{font-size:clamp(27px,3.6vw,39px);letter-spacing:-.04em;color:var(--navy);margin:9px 0 12px}
+    .lead{color:var(--muted);margin:0;font-size:15px}
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+    .surface,.card{background:white;border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:0 12px 32px rgba(20,39,58,.035)}
+    .surface h3,.card h3{font-size:18px;color:var(--navy);margin:0 0 10px}
+    .surface p,.card p{color:var(--muted);margin:0}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .fact{background:#f5f8fa;border-radius:12px;padding:15px}.fact b{display:block;font:800 15px Manrope;color:var(--navy)}.fact span{font-size:12px;color:var(--muted)}
+    .dark-section{background:#edf2f5}
+    .timeline{border-left:2px solid #b8cbd4;margin-left:8px;padding-left:25px;position:relative}
+    .timeline:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--teal);left:-7px;top:4px;box-shadow:0 0 0 5px #d9efeb}
+    .date{font-size:11px;letter-spacing:.12em;font-weight:800;color:var(--blue)}
+    .role-line{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .role-line h3{margin:5px 0 3px;font-size:20px;color:var(--navy)}
+    .company{font-size:13px;color:var(--muted);font-weight:600}
+    ul.clean{padding-left:19px;color:#536477;margin:15px 0}ul.clean li{padding:3px 0}
+    .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.chip{background:#eaf2f5;color:#24576c;border-radius:30px;padding:5px 10px;font-size:11px;font-weight:700}
+    .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .project-card{position:relative;overflow:hidden}.project-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;background:linear-gradient(120deg,#fff,#f0f6f7)}
+    .project-index{font:800 12px Manrope;letter-spacing:.15em;color:var(--teal)}
+    .project-card h3{font-size:20px;margin:9px 0}.project-card p{font-size:14px}
+    .project-visual{min-height:190px;border-radius:13px;background:linear-gradient(145deg,#132b40,#286276);padding:20px;color:white;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+    .project-visual:after{content:"";position:absolute;width:180px;height:180px;border:1px solid #ffffff30;border-radius:50%;right:-45px;top:-50px;box-shadow:0 0 0 24px #ffffff0a,0 0 0 48px #ffffff08}
+    .visual-title{font:800 17px Manrope;position:relative;z-index:1;max-width:220px}.visual-flow{display:flex;gap:7px;align-items:center;position:relative;z-index:1;flex-wrap:wrap}.visual-flow span{background:#ffffff18;border:1px solid #ffffff30;border-radius:7px;padding:6px 9px;font-size:10px;font-weight:700}
+    .project-meta{font-size:11px;color:#688091;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px}
+    .skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .skill-card{background:white;border:1px solid var(--line);border-radius:13px;padding:17px}
+    .skill-card .num{font:800 11px Manrope;color:var(--teal);letter-spacing:.1em}
+    .skill-card h3{font-size:14px;margin:8px 0 4px;color:var(--navy)}.skill-card p{font-size:12px;color:var(--muted);margin:0}
+    .tools{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.tool{border:1px solid #d7e1e7;border-radius:8px;padding:8px 12px;background:#fff;color:#3d5668;font-size:12px;font-weight:700}
+    .education-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu-date{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:.1em}
+    .training-list{display:grid;gap:10px}.training{border-bottom:1px solid var(--line);padding-bottom:10px;color:#526477;font-size:13px}.training:last-child{border:0;padding:0}
+    .contact{background:var(--navy);color:white;padding:65px 0}.contact h2{color:white}.contact .lead{color:#c3d0da}.contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}
+    .contact-links a{border:1px solid #5b7083;border-radius:9px;padding:10px 14px;text-decoration:none;font-size:13px;font-weight:700}.contact-links a:hover{border-color:var(--gold);color:var(--gold)}
+    footer{padding:20px 0;text-align:center;color:#8190a0;font-size:12px}
+    @media(max-width:800px){.hero-inner,.about-grid,.project-card.featured{grid-template-columns:1fr}.hero-card{max-width:420px}.skill-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){nav{height:64px}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;padding:16px 5%;background:#101d2d;flex-direction:column;gap:13px}.navlinks.open{display:flex}.menu-btn{display:block}.hero{padding:65px 0}.hero p{font-size:15px}section{padding:57px 0}.project-grid,.education-grid{grid-template-columns:1fr}.project-card.featured{grid-column:auto}.facts{grid-template-columns:1fr 1fr}.skill-grid{grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="container">
+      <a class="brand" href="#home" style="text-decoration:none">DICKA <span>SINABANG</span></a>
+      <div class="navlinks" id="navlinks">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    </nav>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow">Industrial Engineering Graduate · Telkom University</div>
+        <h1>Turning data and processes into better operations.</h1>
+        <p>I'm Dicka Latare Tricaesar Sinabang, an Industrial Engineering graduate with internship experience in operational data verification, customer coordination, and process support. I am eager to grow in logistics and distribution, warehouse operations, and continuous improvement.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experience">Explore my experience <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="mailto:dickasinabang@gmail.com">Contact me</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Professional snapshot">
+        <div class="mini-label">Professional snapshot</div>
+        <div class="hero-stat"><strong>Industrial Engineering</strong><p>Bachelor's degree · Telkom University</p></div>
+        <div class="hero-stat"><strong>Data & Process Support</strong><p>Verification · Classification · Follow-up</p></div>
+        <div class="hero-stat"><strong>Career Focus</strong><p>Logistics · Distribution · Operational Excellence</p></div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><div class="section-label">01 / About</div><h2>Professional profile</h2><p class="lead">A detail-oriented Industrial Engineering graduate interested in how accurate information, disciplined execution, and well-managed processes support reliable operations.</p></div>
+        <div class="about-grid">
+          <article class="surface">
+            <h3>My approach</h3>
+            <p>During my internship at PT Telkom Indonesia, I supported service operations by verifying and classifying records, updating customer information, and following up on outstanding cases. These activities strengthened my attention to detail, coordination, and ability to work with operational data. I am looking to apply this foundation while developing hands-on expertise in logistics and distribution operations.</p>
+          </article>
+          <div class="surface facts">
+            <div class="fact"><b>Bachelor's Degree</b><span>Industrial Engineering</span></div>
+            <div class="fact"><b>3.11 / 4.00</b><span>GPA</span></div>
+            <div class="fact"><b>Telkom University</b><span>Bandung, Indonesia</span></div>
+            <div class="fact"><b>2022 – 2026</b><span>Study period</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="experience">
+      <div class="container">
+        <div class="section-head"><div class="section-label">02 / Experience</div><h2>Professional experience</h2><p class="lead">Practical exposure to operational data handling, service coordination, and field-level follow-up.</p></div>
+        <div class="surface timeline">
+          <div class="date">JULY 2025 — AUGUST 2025</div>
+          <div class="role-line"><div><h3>Business Service Intern</h3><div class="company">PT Telekomunikasi Indonesia Tbk · Witel Sumut, Medan</div></div><span class="chip">Internship</span></div>
+          <ul class="clean">
+            <li>Verified, validated, and maintained WMS, HSI, and IndiBiz customer records using internal dashboards and Microsoft Excel to support data accuracy.</li>
+            <li>Classified records by payment status and operational categories, including RNA, unpaid, and winback, to support prioritization and follow-up activities.</li>
+            <li>Conducted customer follow-ups and updated contact-person information in internal systems to maintain reliable records and communication.</li>
+            <li>Performed field visits to customers with two-month overdue bills to communicate billing information and confirm service-use status.</li>
+          </ul>
+          <div class="chips"><span class="chip">Data Verification</span><span class="chip">Data Accuracy</span><span class="chip">Microsoft Excel</span><span class="chip">Dashboard</span><span class="chip">Coordination</span><span class="chip">Field Follow-up</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head"><div class="section-label">03 / Selected work</div><h2>Projects & applied learning</h2><p class="lead">Academic work that demonstrates process thinking, structured problem-solving, and the use of digital tools.</p></div>
+        <div class="project-grid">
+          <article class="card project-card featured">
+            <div>
+              <div class="project-index">PROJECT 01 · FINAL PROJECT</div>
+              <h3>E-Learning for FRI Competition Preparation</h3>
+              <p>Designed an e-learning platform as a knowledge-management tool to support student preparation for PKM, PPK Ormawa, and P2MW competitions at the Faculty of Industrial Engineering, Telkom University.</p>
+              <ul class="clean">
+                <li>Applied the ADDIE instructional design method with the SECI knowledge-creation approach.</li>
+                <li>Structured learning flows and documented best practices to support knowledge sharing.</li>
+                <li>Designed the platform to support guided and self-directed learning.</li>
+              </ul>
+              <div class="chips"><span class="chip">ADDIE</span><span class="chip">SECI</span><span class="chip">Google Apps Script</span><span class="chip">Process Design</span></div>
+            </div>
+            <div class="project-visual">
+              <div class="visual-title">Structured learning workflow</div>
+              <div class="visual-flow"><span>Pre-test</span><span>Learning</span><span>Post-test</span></div>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-meta">PROJECT 02 · INTERNSHIP EXPERIENCE</div>
+            <h3>Operational Data Management & Follow-up</h3>
+            <p>Supported customer-service operations through record validation, status classification, information updates, and follow-up activities.</p>
+            <ul class="clean"><li>Worked with structured customer records and internal dashboards.</li><li>Maintained contact information and supported case follow-up.</li><li>Handled both desk-based data tasks and field coordination.</li></ul>
+            <div class="chips"><span class="chip">Data Management</span><span class="chip">Accuracy</span><span class="chip">Coordination</span></div>
+          </article>
+          <article class="card project-card">
+            <div class="project-meta">PROJECT 03 · TECHNICAL EXPOSURE</div>
+            <h3>Information Systems & Data Tools</h3>
+            <p>Academic and practical exposure to digital tools for information management, analysis, and process support.</p>
+            <ul class="clean"><li>Used Microsoft Excel for data processing and organized records.</li><li>Explored SQL and Looker Studio for data and reporting tasks.</li><li>Used Google Apps Script in the e-learning project.</li></ul>
+            <div class="chips"><span class="chip">Excel</span><span class="chip">SQL</span><span class="chip">Looker Studio</span><span class="chip">Apps Script</span></div>
+          </article>
+        </div>
+        <p class="lead" style="font-size:12px;margin-top:18px">Project descriptions summarize work and tools stated in my academic and internship experience. Supporting screenshots or a public demo can be added when available. No confidential company or customer information is displayed.</p>
+      </div>
+    </section>
+
+    <section class="dark-section" id="skills">
+      <div class="container">
+        <div class="section-head"><div class="section-label">04 / Capabilities</div><h2>Core skills</h2><p class="lead">Transferable capabilities relevant to operational environments, data accuracy, and continuous improvement.</p></div>
+        <div class="skill-grid">
+          <div class="skill-card"><div class="num">01</div><h3>Operational Data Accuracy</h3><p>Record verification, validation, classification, and information updates.</p></div>
+          <div class="skill-card"><div class="num">02</div><h3>Data Processing</h3><p>Microsoft Excel, structured data handling, and dashboard use.</p></div>
+          <div class="skill-card"><div class="num">03</div><h3>Process Analysis</h3><p>Understanding workflows and identifying opportunities to improve execution.</p></div>
+          <div class="skill-card"><div class="num">04</div><h3>Problem Solving</h3><p>Analytical thinking, attention to detail, and case follow-up.</p></div>
+          <div class="skill-card"><div class="num">05</div><h3>Coordination</h3><p>Customer communication, follow-up, and information alignment.</p></div>
+          <div class="skill-card"><div class="num">06</div><h3>Systems Thinking</h3><p>Industrial Engineering foundation and information-system understanding.</p></div>
+          <div class="skill-card"><div class="num">07</div><h3>Adaptability</h3><p>Experience supporting both desk-based tasks and field visits.</p></div>
+          <div class="skill-card"><div class="num">08</div><h3>Continuous Learning</h3><p>Motivated to build practical knowledge in logistics and distribution.</p></div>
+        </div>
+        <div class="tools"><span class="tool">Microsoft Excel</span><span class="tool">Internal Dashboards</span><span class="tool">Google Apps Script</span><span class="tool">SQL</span><span class="tool">Looker Studio</span><span class="tool">UI/UX Design</span></div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head"><div class="section-label">05 / Education</div><h2>Education & professional development</h2></div>
+        <div class="education-grid">
+          <article class="card">
+            <div class="edu-date">AUGUST 2022 — AUGUST 2026</div>
+            <h3 style="margin:8px 0">Telkom University</h3>
+            <p class="muted">Bachelor of Industrial Engineering<br>Bandung, Indonesia<br><b>GPA: 3.11 / 4.00</b></p>
+            <hr style="border:0;border-top:1px solid #e1e7ec;margin:18px 0">
+            <div class="project-meta">Academic focus</div>
+            <p>Industrial Engineering, process design, and knowledge-management-based e-learning development.</p>
+          </article>
+          <article class="card">
+            <div class="project-meta">TRAINING & CERTIFICATIONS · 2026</div>
+            <div class="training-list">
+              <div class="training">Excel Training: Efficient and Organized Financial Recording</div>
+              <div class="training">Office Administration: Digital Corporate Document Management</div>
+              <div class="training">HRIS Administration: Employee Payroll Management</div>
+              <div class="training">HR Administration: Basic Interview Techniques for Candidate Selection</div>
+              <div class="training">Office Administration: Fundamentals of Starting a Career in Administration</div>
+              <div class="training">Google Analytics</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-label" style="color:var(--gold)">06 / Contact</div>
+        <h2>Let's connect.</h2>
+        <p class="lead">I am open to entry-level opportunities and management trainee programs in logistics, distribution, and operations.</p>
+        <div class="contact-links">
+          <a href="mailto:dickasinabang@gmail.com">Email · dickasinabang@gmail.com</a>
+          <a href="https://linkedin.com/in/dicka-latare-tricaesar-sinabang-a1332035a" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/Dicka76" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">© 2026 Dicka Latare Tricaesar Sinabang · Personal Portfolio</div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navlinks=document.getElementById('navlinks');
+    menuBtn.addEventListener('click',()=>{const opened=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(opened));});
+    navlinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  </script>
+</body>
+</html>
